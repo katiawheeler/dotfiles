@@ -8,9 +8,9 @@ To use, simply clone the repo and run `bash install.sh` from the root of the rep
 
 ## Removal
 
-Use the `unlink.sh` command to _just_ break the symlinks.
+Use the `bash unlink.sh` command to _just_ break the symlinks.
 
 > [!CAUTION]
 > Destructive action below
 
-Use the `uninstall-all.sh` command to break the symlinks **AND** delete the added configuration files.
+Use the `bash uninstall.sh` command to break the symlinks **AND** delete the added configuration files.
