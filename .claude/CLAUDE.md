@@ -1,4 +1,4 @@
-# CLAUDE.md - Project Instructions
+# CLAUDE.md
 
 ## Core Requirements
 

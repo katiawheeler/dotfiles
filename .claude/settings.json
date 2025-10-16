@@ -13,6 +13,17 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "raycast://extensions/raycast/raycast/confetti"
+          }
+        ]
+      }
     ]
   }
 }
