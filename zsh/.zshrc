@@ -56,18 +56,43 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# ------------------------------------------------------------------------------
+# Aliases
+# ------------------------------------------------------------------------------
 
+# Directories
 alias vibe="cd ~/Desktop/mine/vibe"
 alias mine="cd ~/Desktop/mine"
-alias claude="devx claude"
 
+# Commands
+alias claude="devx claude"
+alias vim="nvim"
+
+# Configs
+alias zshrc="vim ~/.zshrc"
+alias claude.json="vim ~/.claude.json"
+alias CLAUDE.md="vim ~/.claude/CLAUDE.md"
+
+# ------------------------------------------------------------------------------
+# p10k configuration
+# ------------------------------------------------------------------------------
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#### SHOPIFY SPECIFIC CONFIGURATION ####
+# ------------------------------------------------------------------------------
+# Custom functions
+# ------------------------------------------------------------------------------
+
+# Custom functions
+gtlfg() { gt modify "$@" && gt sync -f && gt submit --stack --update-only; }
+
+
+# ------------------------------------------------------------------------------
+# Shopify specific configuration
+# ------------------------------------------------------------------------------
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 if [ -e /Users/katiawheeler/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/katiawheeler/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
