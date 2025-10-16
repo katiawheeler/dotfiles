@@ -61,17 +61,19 @@ export NVM_DIR="$HOME/.nvm"
 # ------------------------------------------------------------------------------
 
 # Directories
-alias vibe="cd ~/Desktop/mine/vibe"
-alias mine="cd ~/Desktop/mine"
+# alias vibe="cd ~/Desktop/mine/vibe"
+# alias mine="cd ~/Desktop/mine"
 
 # Commands
 alias claude="devx claude"
 alias vim="nvim"
+alias ez="exec zsh"
 
 # Configs
 alias zshrc="vim ~/.zshrc"
 alias claude.json="vim ~/.claude.json"
 alias CLAUDE.md="vim ~/.claude/CLAUDE.md"
+alias settings.json="nvim ~/.claude/settings.json"
 
 # ------------------------------------------------------------------------------
 # p10k configuration
@@ -86,9 +88,17 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Custom functions
 # ------------------------------------------------------------------------------
 
-# Custom functions
+# Graphite
 gtlfg() { gt modify "$@" && gt sync -f && gt submit --stack --update-only; }
 
+# Directories
+vibe() {
+    cd ~/Desktop/mine/vibe/$@
+}
+
+mine() {
+    cd ~/Desktop/mine/$@
+}
 
 # ------------------------------------------------------------------------------
 # Shopify specific configuration
