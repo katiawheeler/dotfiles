@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "raycast://extensions/raycast/raycast/confetti"
+            "command": "open 'raycast://extensions/raycast/raycast/confetti'"
           }
         ]
       }
