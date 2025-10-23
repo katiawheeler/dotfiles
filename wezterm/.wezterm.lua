@@ -3,9 +3,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
--- config.color_scheme = "Batman"
+config.color_scheme = "Catppuccin Mocha"
 
-config.window_close_confirmation = "AlwaysPrompt"
+config.window_close_confirmation = "NeverPrompt"
 config.skip_close_confirmation_for_processes_named = {} -- confirm for ALL tabs
 config.native_macos_fullscreen_mode = true
 
@@ -100,7 +100,7 @@ config.keys = {
   -- PANE MANAGEMENT
   -- TODO: figure out how to make bot and right work nicely together. Maybe something to do with naming instead of relying on index?
   -- {
-    -- Creates a new pane in the bottom if it doesn't exist, otherwise toggles showing and hiding the bottom pane/terminal
+  -- Creates a new pane in the bottom if it doesn't exist, otherwise toggles showing and hiding the bottom pane/terminal
   --   key = ";",
   --   mods = "LEADER",
   --   action = wezterm.action_callback(function(_, pane)
