@@ -147,3 +147,5 @@
 - Highlight important warnings or considerations
 - Use markdown formatting for clarity
 - Keep responses focused on the task at hand
+- never use 'any' type for type declarations. create type interfaces.
+- always use subagents to execute tasks

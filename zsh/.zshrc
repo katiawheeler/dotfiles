@@ -68,12 +68,14 @@ export NVM_DIR="$HOME/.nvm"
 alias claude="devx claude"
 alias vim="nvim"
 alias ez="exec zsh"
+alias codex="devx codex"
 
 # Configs
 alias zshrc="vim ~/.zshrc"
 alias claude.json="vim ~/.claude.json"
 alias CLAUDE.md="vim ~/.claude/CLAUDE.md"
 alias settings.json="nvim ~/.claude/settings.json"
+alias wezterm.lua="nvim ~/.wezterm.lua"
 
 # ------------------------------------------------------------------------------
 # p10k configuration
