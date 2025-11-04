@@ -1,0 +1,7 @@
+node
+neovim
+--cask karabiner-elements
+--cask claude-code
+--cask wezterm
+--cask cursor
+--cask zed
