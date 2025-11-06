@@ -32,11 +32,25 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ### Install all packages at once
 
 ```bash
-brew install $(<homebrew_packages.txt)
+bash homebrew.sh
 ```
 
 ### Install the dotfiles
 
 ```bash
 bash install.sh
+```
+
+### Current formulae
+
+```
+node
+neovim
+karabiner-elements
+claude-code
+wezterm
+cursor
+zed
+raycast
+rectangle
 ```
