@@ -114,3 +114,6 @@ if [ -e /Users/katiawheeler/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/k
 
 # Added by tec agent
 [[ -x /Users/katiawheeler/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/katiawheeler/.local/state/tec/profiles/base/current/global/init zsh)"
+
+# Rust/Cargo
+source "$HOME/.cargo/env"

@@ -83,9 +83,9 @@ table.insert(config.hyperlink_rules, {
 -- KEYBINDINGS
 config.leader = { key = "Space", mods = "CTRL|CMD", timeout_milliseconds = 1000 }
 local action = wezterm.action
-config.keys = {
-  -- KEY MOTIONS
+config.keys = {-- KEY MOTIONS
   { mods = "OPT", key = "LeftArrow", action = action.SendKey({ mods = "ALT", key = "b" }) },
+  { key = "Enter", mods = "SHIFT", action = wezterm.action{SendString="\x1b\r"} },
   { mods = "OPT", key = "RightArrow", action = action.SendKey({ mods = "ALT", key = "f" }) },
   { mods = "CMD", key = "LeftArrow", action = action.SendKey({ mods = "CTRL|CMD", key = "a" }) },
   { mods = "CMD", key = "RightArrow", action = action.SendKey({ mods = "CTRL|CMD", key = "e" }) },
