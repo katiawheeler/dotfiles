@@ -2,7 +2,7 @@
 
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
-ORANGE='\033[0;33m'
+ORANGE='\033[38;5;208m'
 NC='\033[0m' # No Color
 
 echo -e "${GREEN}Creating necessary directories...${NC}"
