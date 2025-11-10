@@ -1,6 +1,6 @@
  #!/bin/bash
 
-GREEN='\033[0;32m'
+GREEN='\033[38;5;120m'
 BLUE='\033[0;34m'
 ORANGE='\033[38;5;208m'
 NC='\033[0m' # No Color
