@@ -24,3 +24,6 @@ echo -e "${GREEN}Unlinking Karabiner configuration...${NC}"
 
 echo -e "${GREEN}Unlinking Claude configuration...${NC}"
 [ -L ~/.claude/CLAUDE.md ] && unlink ~/.claude/CLAUDE.md
+
+echo -e "${GREEN}Unlinking Raycast configuration...${NC}"
+[ -L ~/Library/Application\ Support/Raycast/Extensions ] && unlink ~/Library/Application\ Support/Raycast/Extensions

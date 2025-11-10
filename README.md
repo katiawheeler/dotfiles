@@ -98,3 +98,10 @@ rectangle
   - [settings.json](.claude/settings.json) - Claude Code settings
   - `commands/` - Custom slash commands
   - `agents/` - Custom subagents
+
+### Productivity Tools
+
+- [raycast/](raycast/) - Raycast launcher configuration
+  - `*.rayconfig` - Raycast configuration backup/export file
+  - `extensions/` - Custom Raycast extensions
+  - **Note**: After installation, import the `.rayconfig` file through Raycast's UI: Raycast > Settings > Advanced > Import Configuration

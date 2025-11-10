@@ -54,6 +54,9 @@ if [ -d ~/.claude/agents ]; then
     done
 fi
 
+echo -e "${GREEN}Unlinking Raycast configuration...${NC}"
+[ -L ~/Library/Application\ Support/Raycast/Extensions ] && unlink ~/Library/Application\ Support/Raycast/Extensions
+
 # Remove directories that were created by install (only if empty)
 echo -e "${GREEN}Cleaning up empty directories...${NC}"
 rmdir ~/.config/karabiner 2>/dev/null || true

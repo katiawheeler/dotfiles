@@ -51,4 +51,29 @@ for file in "$PWD"/.claude/agents/*; do
     fi
 done
 
+echo -e "${GREEN}Syncing Raycast configuration...${NC}"
+mkdir -p ~/Library/Application\ Support/Raycast
+# Link extensions directory
+if [ -d ~/Library/Application\ Support/Raycast/Extensions ]; then
+    # Backup existing extensions if they exist
+    if [ ! -L ~/Library/Application\ Support/Raycast/Extensions ]; then
+        echo -e "  ${GREEN}Backing up existing Raycast extensions...${NC}"
+        mv ~/Library/Application\ Support/Raycast/Extensions ~/Library/Application\ Support/Raycast/Extensions.backup.$(date +%Y%m%d_%H%M%S)
+    else
+        unlink ~/Library/Application\ Support/Raycast/Extensions
+    fi
+fi
+ln -sf "$PWD/raycast/extensions" ~/Library/Application\ Support/Raycast/Extensions
+echo -e "  ${GREEN}Linked Raycast extensions${NC}"
+
+# Copy config file to Raycast directory for easy import
+# Note: .rayconfig files need to be imported through Raycast's UI
+# Raycast > Settings > Advanced > Import Configuration
+config_file=$(ls "$PWD/raycast/"*.rayconfig 2>/dev/null | head -1)
+if [ -n "$config_file" ] && [ -f "$config_file" ]; then
+    cp "$config_file" ~/Library/Application\ Support/Raycast/
+    echo -e "  ${GREEN}Copied Raycast configuration file${NC}"
+    echo -e "  ${GREEN}To import: Open Raycast > Settings > Advanced > Import Configuration${NC}"
+fi
+
 echo -e "${GREEN}Done! Configuration files have been linked.${NC}"
