@@ -1,2 +1,4 @@
 node
 neovim
+rg
+sst/tap/opencode
