@@ -53,6 +53,8 @@ cursor
 zed
 raycast
 rectangle
+opencode
+rg
 ```
 
 ## Inventory
