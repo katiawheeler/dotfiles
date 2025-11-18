@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=~/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
@@ -32,9 +25,9 @@ plugins=(
 	colorize
 	dotenv
 	macos
-        brew
-        sudo
-        npm
+  brew
+  sudo
+  npm
 	git
 	)
 
@@ -80,7 +73,7 @@ alias wezterm.lua="nvim ~/.wezterm.lua"
 # ------------------------------------------------------------------------------
 # p10k configuration
 # ------------------------------------------------------------------------------
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -102,18 +95,6 @@ mine() {
     cd ~/Desktop/mine/$@
 }
 
-# ------------------------------------------------------------------------------
-# Shopify specific configuration
-# ------------------------------------------------------------------------------
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-if [ -e /Users/katiawheeler/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/katiawheeler/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
-
-[[ -x /usr/local/bin/brew ]] && eval $(/usr/local/bin/brew shellenv)
-
-# Added by tec agent
-[[ -x /Users/katiawheeler/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/katiawheeler/.local/state/tec/profiles/base/current/global/init zsh)"
-
-# Rust/Cargo
-source "$HOME/.cargo/env"
+desktop() {
+  cd ~/Desktop/$@
+}
