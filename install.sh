@@ -35,6 +35,12 @@ rm -rf ~/.wezterm.lua
 ln -sf "$PWD/wezterm/.wezterm.lua" ~/.wezterm.lua
 
   echo ""
+  echo -e "${BLUE}👻 Syncing Ghostty configuration...${NC}"
+mkdir -p ~/.config/ghostty
+rm -rf ~/.config/ghostty/config
+ln -sf "$PWD/ghostty/config" ~/.config/ghostty/config
+
+  echo ""
   echo -e "${BLUE}🔗 Syncing Karabiner configuration...${NC}"
 mkdir -p ~/.config/karabiner
 rm -rf ~/.config/karabiner/karabiner.json

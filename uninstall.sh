@@ -22,6 +22,9 @@ echo -e "${GREEN}Unlinking neovim configuration...${NC}"
 echo -e "${GREEN}Unlinking wezterm configuration...${NC}"
 [ -L ~/.wezterm.lua ] && unlink ~/.wezterm.lua
 
+echo -e "${GREEN}Unlinking Ghostty configuration...${NC}"
+[ -L ~/.config/ghostty/config ] && unlink ~/.config/ghostty/config
+
 echo -e "${GREEN}Unlinking Karabiner configuration...${NC}"
 [ -L ~/.config/karabiner/karabiner.json ] && unlink ~/.config/karabiner/karabiner.json
 
@@ -59,6 +62,7 @@ echo -e "${GREEN}Unlinking Raycast configuration...${NC}"
 
 # Remove directories that were created by install (only if empty)
 echo -e "${GREEN}Cleaning up empty directories...${NC}"
+rmdir ~/.config/ghostty 2>/dev/null || true
 rmdir ~/.config/karabiner 2>/dev/null || true
 rmdir ~/.config/nvim 2>/dev/null || true
 rmdir ~/.claude/commands 2>/dev/null || true
