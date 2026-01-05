@@ -120,6 +120,7 @@ gcc-arm-embedded
   - [settings.json](.claude/settings.json) - Claude Code settings
   - `commands/` - Custom slash commands
   - `agents/` - Custom subagents
+  - `skills/` - Custom skills
 
 ### Productivity Tools
 
