@@ -1,0 +1,7 @@
+--cask claude-code
+--cask wezterm
+--cask cursor
+--cask zed
+--cask raycast
+--cask rectangle
+--cask gcc-arm-embedded

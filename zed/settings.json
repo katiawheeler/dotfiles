@@ -1,0 +1,73 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "play_sound_when_agent_done": true,
+    "model_parameters": []
+  },
+  "icon_theme": "Catppuccin Frappé",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  "show_edit_predictions": true,
+  "ensure_final_newline_on_save": true,
+  "wrap_guides": [120],
+  "soft_wrap": "editor_width",
+  "terminal": {
+    "env": {
+      "FIG_NEW_SESSION": "1"
+    }
+  },
+  "preview_tabs": {
+    "enabled": false
+  },
+  "project_panel": {
+    "auto_fold_dirs": false
+  },
+  "minimap": {
+    "show": "auto"
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Catppuccin Frappé"
+  },
+  "language_models": {
+    "openai": {
+      "api_url": "https://proxy.shopify.ai/v1"
+    },
+    "anthropic": {
+      "api_url": "https://proxy.shopify.ai/vendors/anthropic"
+    },
+    "google": {
+      "api_url": "https://proxy.shopify.ai/vendors/google"
+    }
+  }
+}

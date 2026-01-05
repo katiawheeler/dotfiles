@@ -1,0 +1,31 @@
+{
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": ["Bash(terminal-notifier:*)"]
+  },
+  "model": "sonnet[1m]",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.message' | xargs -I {} terminal-notifier -message \"{}\" -title \"Claude Hook\" -group \"$(pwd):hook\" -execute \"bash -c 'if pgrep -x ghostty >/dev/null; then open -a Ghostty; elif [ -n \\\"$WEZTERM_PANE\\\" ]; then /opt/homebrew/bin/wezterm cli activate-pane --pane-id $WEZTERM_PANE; fi'\" -activate com.mitchellh.ghostty"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "open 'raycast://extensions/raycast/raycast/confetti'"
+          }
+        ]
+      }
+    ]
+  }
+}
