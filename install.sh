@@ -50,6 +50,7 @@ ln -sf "$PWD/karabiner/karabiner.json" ~/.config/karabiner/karabiner.json
   echo -e "${BLUE}🤖 Syncing Claude configuration...${NC}"
 mkdir -p ~/.claude/commands
 mkdir -p ~/.claude/agents
+mkdir -p ~/.claude/skills
 rm -rf ~/.claude/CLAUDE.md
 ln -sf "$PWD/.claude/CLAUDE.md" ~/.claude/CLAUDE.md
 
@@ -67,7 +68,22 @@ for file in "$PWD"/.claude/agents/*; do
         ln -sf "$file" ~/.claude/agents/"$filename"
         echo -e "  ${GREY}Linked $filename${NC}"
     fi
-    done
+done
+
+# Handle skills with subdirectories
+for dir in "$PWD"/.claude/skills/*/; do
+    if [ -d "$dir" ]; then
+        dirname=$(basename "$dir")
+        mkdir -p ~/.claude/skills/"$dirname"
+        for file in "$dir"*; do
+            if [ -f "$file" ]; then
+                filename=$(basename "$file")
+                ln -sf "$file" ~/.claude/skills/"$dirname"/"$filename"
+                echo -e "  ${GREY}Linked skills/$dirname/$filename${NC}"
+            fi
+        done
+    fi
+done
 
   echo ""
   echo -e "${BLUE}⌨️  Syncing QMK keymap...${NC}"
