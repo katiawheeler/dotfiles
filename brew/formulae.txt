@@ -1,5 +1,5 @@
 node
 neovim
 rg
-sst/tap/opencode
+anomalyco/tap/opencode
 qmk
