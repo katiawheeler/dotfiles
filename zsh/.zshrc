@@ -58,10 +58,10 @@ export NVM_DIR="$HOME/.nvm"
 # alias mine="cd ~/Desktop/mine"
 
 # Commands
-alias claude="devx claude"
 alias vim="nvim"
 alias ez="exec zsh"
-alias codex="devx codex"
+alias qwen3="ollama launch opencode --model qwen3-coder-next:cloud"
+alias kimi="ollama launch opencode --model kimi-k2:1t-cloud"
 
 # Configs
 alias zshrc="vim ~/.zshrc"
@@ -88,11 +88,11 @@ gtlfg() { gt modify "$@" && gt sync -f && gt submit --stack --update-only; }
 
 # Directories
 vibe() {
-    cd ~/Desktop/mine/vibe/$@
+    cd ~/Desktop/vibe/$@
 }
 
 mine() {
-    cd ~/Desktop/mine/$@
+    cd ~/Desktop/github/$@
 }
 
 desktop() {
