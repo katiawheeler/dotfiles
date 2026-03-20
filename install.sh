@@ -18,6 +18,8 @@ ln -sf "$PWD/zsh/.zshrc" ~/.zshrc
 ln -sf "$PWD/zsh/.zprofile" ~/.zprofile
 ln -sf "$PWD/zsh/.p10k" ~/.p10k
 ln -sf "$PWD/zsh/zsh-syntax-highlighting" ~/zsh-syntax-highlighting
+  echo -e "${BLUE}Installing Oh My Zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   echo ""
   echo -e "${BLUE}✏️ Syncing vim files...${NC}"

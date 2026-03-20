@@ -2,4 +2,7 @@ node
 neovim
 rg
 anomalyco/tap/opencode
-qmk
+pyenv
+rbenv
+zsh
+powerlevel10k
