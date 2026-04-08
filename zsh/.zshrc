@@ -62,6 +62,7 @@ alias vim="nvim"
 alias ez="exec zsh"
 alias qwen3="ollama launch opencode --model qwen3-coder-next:cloud"
 alias kimi="ollama launch opencode --model kimi-k2:1t-cloud"
+alias claude-skip="claude --dangerously-skip-permissions"
 
 # Configs
 alias zshrc="vim ~/.zshrc"
