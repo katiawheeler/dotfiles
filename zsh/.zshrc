@@ -63,6 +63,7 @@ alias ez="exec zsh"
 alias qwen3="ollama launch opencode --model qwen3-coder-next:cloud"
 alias kimi="ollama launch opencode --model kimi-k2:1t-cloud"
 alias claude-skip="claude --dangerously-skip-permissions"
+alias daily="cd ~/Desktop/vault && claude --dangerously-skip-permissions -p 'Run /daily-digest'"
 
 # Configs
 alias zshrc="vim ~/.zshrc"
@@ -104,3 +105,10 @@ desktop() {
 cheat() {
   claude -p "$*" --model haiku --append-system-prompt "You are a concise cheat sheet. Provide ONLY the shortest possible answer - just the command, key combination, or flag needed. No explanations, no context, no formatting. Just the raw answer."
 }
+
+# bun completions
+[ -s "/Users/katiawheeler/.bun/_bun" ] && source "/Users/katiawheeler/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
