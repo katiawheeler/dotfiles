@@ -14,20 +14,15 @@ link() {
   echo -e "  ${GREY}Linked $(basename "$2")${NC}"
 }
 
-sync_skills() {
-  local target="$1"
-  mkdir -p "$target"
-  for dir in "$PWD"/.agents/skills/*/; do
-    [ -d "$dir" ] || continue
-    dirname=$(basename "$dir")
-    mkdir -p "$target/$dirname"
-    for file in "$dir"*; do
-      [ -f "$file" ] || continue
-      filename=$(basename "$file")
-      ln -sf "$file" "$target/$dirname/$filename"
-      echo -e "  ${GREY}Linked skills/$dirname/$filename${NC}"
-    done
-  done
+install_skills() {
+  # Pull the latest skills from upstream instead of syncing stale vendored copies.
+  npx -y skills add mattpocock/skills \
+    -s grill-me -s grill-with-docs -s handoff -s improve-codebase-architecture \
+    -s review -s teach -s to-prd -s triage -s wayfinder -s writing-great-skills \
+    -g -a claude-code -a codex -y
+  npx -y skills add DietrichGebert/ponytail \
+    -s ponytail -s ponytail-audit -s ponytail-review \
+    -g -a claude-code -a codex -y
 }
 
 echo ""
@@ -94,13 +89,13 @@ for file in "$PWD"/.claude/agents/*; do
   echo -e "  ${GREY}Linked $filename${NC}"
 done
 
-sync_skills ~/.claude/skills
-
 echo ""
-echo -e "${BLUE}🤖 Syncing Codex Skills configuration...${NC}"
-sync_skills ~/.codex/skills
-
-sync_skills ~/.agents/skills
+echo -e "${BLUE}🧠 Installing agent skills via skills.sh...${NC}"
+if command -v npx >/dev/null 2>&1; then
+  install_skills
+else
+  echo -e "  ${ORANGE}npx not found — skipping skill install. Install Node.js, then re-run.${NC}"
+fi
 
 
 
