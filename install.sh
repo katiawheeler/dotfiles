@@ -16,10 +16,7 @@ link() {
 
 install_skills() {
   # Pull the latest skills from upstream instead of syncing stale vendored copies.
-  npx -y skills add mattpocock/skills \
-    -s grill-me -s grill-with-docs -s handoff -s improve-codebase-architecture \
-    -s review -s teach -s to-prd -s triage -s wayfinder -s writing-great-skills \
-    -g -a claude-code -a codex -y
+  npx -y skills add mattpocock/skills -g -a claude-code -a codex -y
   npx -y skills add DietrichGebert/ponytail \
     -s ponytail -s ponytail-audit -s ponytail-review \
     -g -a claude-code -a codex -y
