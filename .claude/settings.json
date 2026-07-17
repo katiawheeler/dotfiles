@@ -1,9 +1,26 @@
 {
   "includeCoAuthoredBy": false,
   "permissions": {
-    "allow": ["Bash(terminal-notifier:*)"]
+    "allow": ["Bash(terminal-notifier:*)"],
+    "deny": [
+      "EnterPlanMode",
+      "ExitPlanMode",
+      "DesignSync",
+      "NotebookEdit",
+      "SendMessage",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "AskUserQuestion",
+      "CronCreate",
+      "CronList",
+      "CronDelete"
+    ]
   },
-  "model": "sonnet[1m]",
+  "disabledBundledSkills": true,
+  "disableWorkflows": true,
+  "disableRemoteControl": true,
+  "disableArtifact": true,
   "hooks": {
     "Notification": [
       {
