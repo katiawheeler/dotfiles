@@ -22,6 +22,16 @@ install_skills() {
     -g -a claude-code -a codex -y
 }
 
+sync_local_skills() {
+  local target="$1"
+  local source="$PWD/.claude/skills"
+
+  [ -d "$source" ] || return
+  mkdir -p "$target"
+  cp -R "$source/." "$target/"
+  echo -e "  ${GREY}Copied local skills to $target${NC}"
+}
+
 echo ""
 echo -e "${PURPLE}📁 Creating necessary directories...${NC}"
 mkdir -p ~/.config/nvim
@@ -93,6 +103,8 @@ if command -v npx >/dev/null 2>&1; then
 else
   echo -e "  ${ORANGE}npx not found — skipping skill install. Install Node.js, then re-run.${NC}"
 fi
+sync_local_skills ~/.claude/skills
+sync_local_skills ~/.codex/skills
 
 
 
