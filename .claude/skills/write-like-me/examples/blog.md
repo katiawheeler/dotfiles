@@ -14,4 +14,4 @@ Short representative passages. Read for rhythm and stance, not content.
 
 > Not very helpful if you look at it skin deep.
 
-**What to copy:** direct second-person address; a blunt "you're doing it wrong" punchline; standalone one-line sentences dropped in for emphasis; "Let's say…" and rhetorical-question scaffolding; inline `backticks`; ending by handing agency back to the reader ("It is up to you to decide").
+**What to copy:** direct second-person address; a blunt "you're doing it wrong" punchline; standalone one-line sentences dropped in for emphasis; brief hypotheticals and rhetorical-question scaffolding; inline `backticks`; ending by handing agency back to the reader ("It is up to you to decide").

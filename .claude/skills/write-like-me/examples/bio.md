@@ -2,7 +2,7 @@
 
 Personal-brand writing: the teacher voice turned up, more playful.
 
-> While growing up, she was constantly at the computer, either playing a rousing game of The Sims (let's be honest, she was putting them all in the pool and taking away the ladder) or creating new Xanga layouts.
+> While growing up, she was constantly at the computer, either playing a rousing game of The Sims (honestly, she was putting them all in the pool and taking away the ladder) or creating new Xanga layouts.
 
 > She has also dabbled in machine learning (Skynet), iOS and Android development, and does freelance WordPress development on the side.
 
